@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Saver",
+  "version": "1.0.0",
+  "description": "Save, search, restore, export, and organize browser tab sessions locally.",
+  "author": "Radwan Abdulhadi Ahmed (@rad03i2)",
+  "permissions": ["tabs", "storage"],
+  "action": {
+    "default_title": "Tab Saver",
+    "default_popup": "src/popup.html"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "commands": {
+    "save-current-window": {
+      "suggested_key": {"default": "Ctrl+Shift+S", "mac": "Command+Shift+S"},
+      "description": "Save tabs in the current window"
+    }
+  }
+}
