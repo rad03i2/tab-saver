@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tab Saver</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header><div><h1>Tab Saver</h1><p>Local session manager</p></div><button id="save" class="primary">Save window</button></header>
+  <main>
+    <label class="search"><span>Search</span><input id="query" type="search" placeholder="Session, title, or URL" autocomplete="off"></label>
+    <div class="toolbar">
+      <button id="export">Export JSON</button><button id="import">Import JSON</button><input id="file" type="file" accept="application/json,.json" hidden>
+    </div>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section id="sessions" aria-label="Saved sessions"></section>
+    <div id="empty" class="empty" hidden><strong>No saved sessions</strong><span>Save the current window to begin.</span></div>
+  </main>
+  <template id="session-template">
+    <article class="card">
+      <div class="card-head"><div><h2></h2><small></small></div><span class="count"></span></div>
+      <ul></ul>
+      <div class="actions"><button data-action="restore" class="primary">Restore</button><button data-action="rename">Rename</button><button data-action="delete" class="danger">Delete</button></div>
+    </article>
+  </template>
+  <script src="core.js"></script><script src="popup.js"></script>
+</body>
+</html>
