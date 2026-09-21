@@ -1,0 +1,13 @@
+{
+  "name": "tab-saver",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Privacy-first browser tab session manager.",
+  "author": "Radwan Abdulhadi Ahmed (@rad03i2)",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/core.js && node --check src/background.js && node --check src/popup.js"
+  },
+  "engines": { "node": ">=20" }
+}
